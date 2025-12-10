@@ -105,7 +105,6 @@ PyJWT==2.10.1
 PyMySQL==1.1.2
 pyOpenSSL==25.3.0
 pyparsing==3.1.4
-pyppeteer==2.0.0
 pyquery==2.0.1
 PySocks==1.7.1
 pytesseract==0.3.10
@@ -155,7 +154,6 @@ Twisted==25.5.0
 typing_extensions==4.15.0
 tzdata==2024.1
 undetected-chromedriver==3.5.5
-urllib3==2.5.0
 w3lib==2.3.1
 watchdog==6.0.0
 webdriver-manager==4.0.2
