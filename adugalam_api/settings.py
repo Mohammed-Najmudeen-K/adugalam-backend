@@ -3,6 +3,7 @@ from datetime import timedelta
 import os
 import dj_database_url
 
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # --------------------------------------------------------
@@ -10,11 +11,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # --------------------------------------------------------
 SECRET_KEY = os.environ.get("SECRET_KEY", "unsafe-secret-key")
 DEBUG = os.environ.get("DEBUG", "False") == "True"
-ALLOWED_HOSTS = [
-    "adugalam.com",
-    "www.adugalam.com",
-    ".onrender.com"
-]
+ALLOWED_HOSTS = ["*", ".onrender.com", "adugalam.com", "www.adugalam.com"]
+
 
 
 
@@ -124,6 +122,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # --------------------------------------------------------
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
