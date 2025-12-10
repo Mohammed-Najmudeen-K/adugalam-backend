@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # --------------------------------------------------------
 SECRET_KEY = os.environ.get("SECRET_KEY", "unsafe-secret-key")
 DEBUG = os.environ.get("DEBUG", "False") == "True"
-ALLOWED_HOSTS = ["*", ".onrender.com", "adugalam.com", "www.adugalam.com"]
+ALLOWED_HOSTS = ["adugalam.com", "www.adugalam.com", ".onrender.com"]
 
 
 
@@ -120,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # --------------------------------------------------------
 # STATIC & MEDIA (Render Compatible)
 # --------------------------------------------------------
-STATIC_URL = "/static/"
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
