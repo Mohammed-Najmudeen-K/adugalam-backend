@@ -1,6 +1,6 @@
 ﻿Django==5.0.6
 djangorestframework==3.16.1
-djangorestframework-simplejwt==6.1.0
+djangorestframework-simplejwt==5.5.1
 gunicorn==23.0.0
 psycopg2-binary==2.9.11
 dj-database-url==3.0.1
